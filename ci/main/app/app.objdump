@@ -3,16 +3,16 @@ app:	file format elf32-littlearm
 
 Disassembly of section .text:
 
-<main>:
-               	push	{r7, lr}
-               	mov	r7, sp
-               	sub	sp, #0x4
-               	movs	r0, #0x2a
-               	str	r0, [sp]
-               	b	0x14 <main+0xc>         @ imm = #-0x2
-               	b	0x14 <main+0xc>         @ imm = #-0x4
+00000008 <main>:
+       8:      	push	{r7, lr}
+       a:      	mov	r7, sp
+       c:      	sub	sp, #0x4
+       e:      	movs	r0, #0x2a
+      10:      	str	r0, [sp]
+      12:      	b	0x14 <main+0xc>         @ imm = #-0x2
+      14:      	b	0x14 <main+0xc>         @ imm = #-0x4
 
-<Reset>:
-               	push	{r7, lr}
-               	mov	r7, sp
-               	bl	0x8 <main>              @ imm = #-0x16
+00000016 <Reset>:
+      16:      	push	{r7, lr}
+      18:      	mov	r7, sp
+      1a:      	bl	0x8 <main>              @ imm = #-0x16
